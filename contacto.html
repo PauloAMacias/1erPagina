@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+        <head> 
+        <meta charset="UTF-8"> 
+        <title>Contacto - Barbería Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="caja">
+                <h1><img src="imagenes/logo.png" alt="Logo de la Barbería Alura"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>      
+                    </ul>
+                </nav>
+            </div>                  
+        </header>
+        <main>
+            <form>
+                <!-- Label for="", crea la etiqueta que va asociada al
+                espacio del formulario, input="",crea el cuadro de captura,
+                estos dos se deben asociar mediante un id="", para que correspondan-->
+                <label for="nombreapellido"> Nombre y apellido</label>
+                <input type="text" id="nombreapellido" class="input-padron" required>
+
+                <label for="correoelectronico">Correo Electronico</label>
+                <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com"
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" class="input-padron" requiered placeholder="(XX) XXXX-XXXX">
+                
+                <label for="mensaje"> </label>
+                <!-- textarea permite crear un campo de texto libre que, 
+                además de todo, el usuario puede cambiar su tamaño mediante
+                click y arrastrar con el mouse, también se asocia a un id
+                para poderse relacionar con un laber for="" -->
+                <textarea cols="70" rows="10" id="mensaje" class="input-padron" requiered></textarea>
+                
+                <fieldset> 
+                    <!-- Como en este grupo se está hablando de la misma cosa, cómo comunicarse
+                    entonces, en lugar de div, podemos utilizar fieldset. -->
+                    <legend>¿Cómo le gustaría que lo contactemos?</legend>
+                    <!-- El input de tipo radio, es el utilizado para crear 
+                    el item de selección (para palomear), que permite seleccionar una opción, en esta línea se colocó el input dentro del label para que el puntito aparezca antes del label -->
+                    <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">E-mail</label>                 
+                    
+                    <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Teléfono</label>
+
+                    <!-- Con la propiedad name="", se asigna la pertenencia de cada opción, entonces el navegador interpreta que sólo se puede escoger uno de los tres -->
+                    <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+                      
+                </fieldset>
+
+                <fieldset>
+                    <legend> ¿En cuál horario prefiere ser atendido?</legend>
+                    <select>
+                        <option>Mañana</option>
+                        <option>Tarde</option>
+                        <option>Noche</option>
+                    </select>
+                </fieldset>
+               
+                <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la Barbería Alura?</label>
+                
+                <!-- input también se utiliza para crear el botón de envío de 
+                formulario, de acuerdo a la línea de código siguiente -->
+                <input type="submit" value="Enviar formulario" class="enviar">
+            </form>
+
+            <!-- A continuación se estructura la tabla donde se plasmará el horario de la Peluqueria. -->
+            <table>
+                <thead>
+                    <tr> <!-- Table rows, son los renglones -->
+                        <th>Día</td> <!-- Primer celda en el renglón -->
+                        <th>Horario</td> <!-- Segunda celda en el renglón -->
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr> 
+                        <td>Lunes</td> 
+                        <td>08H ~ 20H</td>
+                    </tr>
+                    <tr> 
+                        <td>Miércoles</td> 
+                        <td>08H ~ 20H</td>
+                    </tr>
+                    <tr> 
+                        <td>Viernes</td> 
+                        <td>08H ~ 20H</td>
+                    </tr>
+                </tbody>
+            
+            </table>
+        </main>
+        <footer>
+
+            <img src="imagenes/logo-blanco.png" alt="Logo de la Barbería Alura">
+            <!-- El código &copy, es el código de identidad del símbolo
+            de copyright, se sacó de la página unicode-table.com que ahora
+            es symbl.cc --->
+            <p class="copyright">&copy Copyright Barbería Alura - 2023</p>
+                        
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,232 @@
+header{
+    background-color: #BBBBBB;
+    padding: 20px;
+}
+
+.caja{
+
+    width: 940px;
+    position:relative;
+    /* El valor de cero corresponde a arriba/abajo, y el valor de auto, se 
+    pone porque es los margenes laterales y no sabemos qué resolución
+    tendría la pantalla donde se visualice el sitio */
+    margin: 0 auto;
+
+}
+
+nav{
+
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li{
+
+    display: inline;
+
+    /* El comando marging, tiene 4 parámetros, que corresponden a 
+    cada lado del margen (espaciamiento interno arriba, a la derecha, 
+    hacia abajo y el último a la izquierda. */
+    margin: 0 0 0 15px;
+
+}
+
+nav a{
+    text-transform:uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+/* hover es la propiedad que permite que la liga capture el movimiento
+del mouse y cambie de color, es conocido como una pseudo-clase y permite
+el cambio de color del elmento cuendo el mouse pasa por encima del mismo  */
+nav a:hover{
+    color: #c78c19;
+    text-decoration:underline;
+
+}
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li{
+        /* Un elemento con un display con valor inline-block, se comporta pudiendo
+        ajustar su tamaño, tanto en largo como en altura. */
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+        /* Este color de background sólo se usó para poder distinguir bien las
+        dimensiones de los elementos con los que estamos trabajando
+        background: #CCCCCC;*/
+    margin: 0 1.5%;
+         /* Cuando se agrega el padding a un elemento, este aumenta su tamaño */
+    padding: 30px 20px;
+    box-sizing: border-box;
+        /*  
+        Estos tres parámetros se pueden resumir en uno solo y es el que se 
+        encuentra posterior a este bloque de comentario.
+
+        border-color:#000000;
+        border-width: 2px;
+        border-style: solid;
+        */
+
+        /* 
+        Siendo este el comando que reemplaza al bloque anterior de tres
+        líneas, vale explicar el orden de sus tres parámetros: 1)Ancho de
+        borde, 2)Estilo de borde; y 3)Color de borde, el orden es muy importante
+        */
+    border: 2px solid #000000;
+
+        /* Con el comando border-radius, se redondea el borde y se necesita 
+        colocar el radio de cada esquina,empezando por el borde superior izquierdo
+        en sentido de las manecillas del reloj, esto si cada esquina tiene un
+        radio diferente, en caso de que las cuatro tengan el mismo, con poner
+        el valor deseado una vez es suficiente.
+
+        Otra opción es utilizar los comandos.-
+            border-top-left-radius
+            border-top-rigth-radius
+            border-bottom-rigth-radius
+            border-bottom-left-radius
+        Sin embargo, implican más trabajo y código adicional sin sentido.    
+        */
+    border-radius: 10px;
+}
+
+.productos li:hover{
+    border-color:#c78c19;
+
+}
+/* active, al igual que hover, es una pseudo-clase, pero a diferencia de 
+hover, estes consigue el cambio de comportamiento del elemento cuando
+este está siendo activado por el usuario (se le está dando click, en 
+este caso). */
+.productos li:active{
+    border-color:#088c19;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{
+    font-size: 33px; 
+}
+
+.producto-descripcion{
+    font-size: 18px;
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center; 
+    /* 
+    A diferencia de HTML, que se utiliza la propiedad src="", para 
+    agregar una foto, en CSS se utiliza url() con la dirección de la 
+    imagen en la carpeta del proyecto, al final de cuentas se utilizan
+    igual, sólo que en este caso, al ser background, el sistema en 
+    automático copia y pega la misma imagen hasta llenar todo el espacio 
+    del pie de página. 
+    */
+    background: url(imagenes/bg.jpg);
+    padding: 40px;
+}
+
+.copyright{
+    color:#FFFFFF;
+    font-size: 13px;
+    margin:20px;
+}
+
+main{
+    width: 940px;
+    margin: 0 auto;
+
+}
+
+form{
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%; 
+}
+
+.checkbox{
+    margin: 20px 0;
+} 
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size:18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius:5px;
+    transition: 1s all; 
+    /* Con la propiedad transition, se logra que el cambio realizado por
+    hover, tome el tiempo determinado, en este caso se pide que el 
+    background tarde un segundo en hacer la transicion. */
+    cursor:pointer;
+}
+
+.enviar:hover{
+    background:darkorange;
+    transform: scale(1.2) 
+    /* También tenemos la propiedad rotate(70deg); que se puede utilizar
+    en transform, sólo es con fines demostrativos, ya que no se atractivo
+    ni un aspecto visual que quisiéramos tener en la página que estamos
+    diseñando. */
+}
+
+table{
+    margin: 40px 40px;
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td,th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+/* 
+Existe una jerarquía entre los marcadores que podemos usar en CSS, esta
+organiza de la siguiente manera: 1)id; 2)class y; 3)etiqueta; van en orden
+descendente, por lo que la que tiene mayor prioridad es el id.
+    - # se utiliza para marcar los id en CSS (Vale 100).
+    - . se usa como marcador de clase (Vale 10).
+    - p div label, etc, son las etiquetas y se utilizan por sí solas en el
+      CSS (Vale 1).
+
+Existe un cuarto modo que tiene el mayor peso de todos, se le conoce las 
+configuraciones directo en  HTML, se le conoce como configuración inline,
+el navegador (Vale 1000).
+*/
