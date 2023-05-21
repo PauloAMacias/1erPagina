@@ -276,7 +276,23 @@ el navegador (Vale 1000).
     text-align: center;
 }
 
-.imagenDiferenciales{
+.contenido-diferenciales{
+    width: 640px;
+    margin: 0 auto; /* Arriba y abajo y auto en los laterales */
+    display: flex; /* En esta versión de VSCode se necesita esta línea para que se alínee el texto con la imagen */
+}
+
+.items{
+    line-height: 1.5;
+}
+
+.lista-diferenciales{
+    width: 40%;
+    /*display: inline-block; Esta línea se elimina debido a que no se necesita en esta versión de VScode para que la imagen se alínee con el texto*/
+    vertical-align: top;
+}
+
+.imagen-diferenciales{
     width: 60%;
 }
 
