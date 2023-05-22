@@ -156,12 +156,6 @@ footer{
     margin:20px;
 }
 
-main{
-    width: 940px;
-    margin: 0 auto;
-
-}
-
 form{
     margin: 40px 0;
 }
@@ -240,6 +234,13 @@ el navegador (Vale 1000).
     width: 100%;
 }
 
+.principal{
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
 .titulo-principal{
     text-align: center;
     font-size: 2em;
@@ -269,11 +270,21 @@ el navegador (Vale 1000).
 
 .mapa{
     padding: 3em 0;
+    /* Se puede modificar la inclinación del degradado agregando al inicio (dentro de los paréntesis) los grados a los que se quiere que se represente: 45deg, por ejemplo. */
+    background: linear-gradient(#FEFEFE, #888888);
 }
 
 .mapa p{
     margin: 0 0 2em;
     text-align: center;
+}
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+.diferenciales{
+    padding: 3em 0;
+    background: #888888
 }
 
 .contenido-diferenciales{
