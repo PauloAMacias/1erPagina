@@ -285,6 +285,10 @@ el navegador (Vale 1000).
 .items{
     line-height: 1.5;
 }
+/* Esto es una pseudoclase, lo que significa es que al primer elemento de la clase items, es el que se va a afectar. También se puede puede usar last-child, para afectar sólo al último elemento de la clase, o utilizar de la forma: nth-child(3) y se resaltará el tercero. */
+.items:first-child{
+    font-weight: bold;
+}
 
 .lista-diferenciales{
     width: 40%;
