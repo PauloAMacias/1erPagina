@@ -28,7 +28,6 @@ nav{
 nav li{
 
     display: inline;
-
     /* El comando marging, tiene 4 parámetros, que corresponden a 
     cada lado del margen (espaciamiento interno arriba, a la derecha, 
     hacia abajo y el último a la izquierda. */
@@ -146,7 +145,7 @@ footer{
     automático copia y pega la misma imagen hasta llenar todo el espacio 
     del pie de página. 
     */
-    background: url(imagenes/bg.jpg);
+    background: url(./imagenes/bg.jpg);
     padding: 40px;
 }
 
@@ -248,6 +247,9 @@ el navegador (Vale 1000).
     clear: left; /*Esta imagen solo aplica en este bloque */
 }
 
+/* .titulo-principal:first-letter{
+    font-weight: bold;
+} */
 .principal p{
     margin: 0 0 1em;
 
@@ -293,18 +295,33 @@ el navegador (Vale 1000).
     display: flex; /* En esta versión de VSCode se necesita esta línea para que se alínee el texto con la imagen */
 }
 
+
+.lista-diferenciales{
+    width: 40%; 
+    /*display: inline-block; Esta línea se elimina debido a que no se necesita en esta versión de VScode para que la imagen se alínee con el texto*/
+    vertical-align: top;
+}
+
+@counter-style symbol-star{
+    system: cyclic;
+    symbols: "\2605";
+    suffix: " ";
+}
+
 .items{
     line-height: 1.5;
+    list-style: symbol-star;
 }
+
+/* 
+Eliminé este .items:before, debido a que la implementación del @counter-style ayuda que el texto del segundo renglón de la primer línea de la lista, esté alineado al texto y no a la viñeta.
+.items:before{
+    content:"★"
+} */
+
 /* Esto es una pseudoclase, lo que significa es que al primer elemento de la clase items, es el que se va a afectar. También se puede puede usar last-child, para afectar sólo al último elemento de la clase, o utilizar de la forma: nth-child(3) y se resaltará el tercero. */
 .items:first-child{
     font-weight: bold;
-}
-
-.lista-diferenciales{
-    width: 40%;
-    /*display: inline-block; Esta línea se elimina debido a que no se necesita en esta versión de VScode para que la imagen se alínee con el texto*/
-    vertical-align: top;
 }
 
 .imagen-diferenciales{
