@@ -4,6 +4,8 @@
     
     <head>
         <meta charset="UTF-8"> 
+        <!-- La siguiente etiqueta meta, básicamente que esta página será visualizada en dispositivos móviles. -->
+        <meta name="viewport" content="width=device-width">
         <title>Barbería Alura</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
@@ -53,21 +55,22 @@
 
             <section class="diferenciales">
     
-                <h3 class="titulo-principal">Diferenciales</h3>
-            
+                <h3 class="titulo-principal">Diferenciales</h3>           
 
                 <div class="contenido-diferenciales">
-                    <ul class="lista diferenciales">
+                    <ul class="lista-diferenciales">
                         <li class="items">Atención personalizada a los clientes</li>
                         <li class="items">Espacio diferenciado</li>
                         <li class="items">Localización</li>
                         <li class="items">Profesionales calificados</li>
                         <li class="items">Puntualidad</li>
                         <li class="items">Limpieza</li>
-                    </ul><img src="./diferenciales/diferenciales.jpg" class="imagen-diferenciales">
+                    </ul>
+                    <img src="./diferenciales/diferenciales.jpg" class="imagen-diferenciales">
                 </div>
                 <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <!-- Se cambió el width de esta sección de 560px a 100% para que el tamaño del thumbnail sea responsivo y no sólo el video en reproducción -->
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
     
             </section>
